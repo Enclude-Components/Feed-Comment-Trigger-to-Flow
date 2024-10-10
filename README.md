@@ -1,10 +1,5 @@
 # Feed-Comment-Trigger-to-Flow
 
-Add a brief description of this project here, in Markdown format.
-It will be shown on the main page of the project's GitHub repository.
-
-# Feed-Comment-Trigger-to-Flow
-
 Contains metadata to create automations for Chatter Feed Comments declaratively via Flows
 
 ## Deploy
