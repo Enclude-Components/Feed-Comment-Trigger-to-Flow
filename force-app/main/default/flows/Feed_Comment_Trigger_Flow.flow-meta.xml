@@ -5,6 +5,14 @@
     <environments>Default</environments>
     <interviewLabel>Feed Comment Trigger Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Feed Comment Trigger Flow</label>
+    <loops>
+        <name>For_Each_Feed_Comment</name>
+        <label>For Each Feed Comment</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <collectionReference>feedCommentsNew</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+    </loops>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -27,6 +35,27 @@
     <start>
         <locationX>50</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>For_Each_Feed_Comment</targetReference>
+        </connector>
     </start>
     <status>Draft</status>
+    <variables>
+        <description>List of Trigger.new records passed from the FeedComment trigger</description>
+        <name>feedCommentsNew</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FeedComment</objectType>
+    </variables>
+    <variables>
+        <description>List of Trigger.old records passed from the FeedComment trigger</description>
+        <name>feedCommentsOld</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FeedComment</objectType>
+    </variables>
 </Flow>
